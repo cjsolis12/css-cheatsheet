@@ -2,6 +2,7 @@
 :root{
     --light-color:white;
     --pink-color: rgb(208, 56, 238);
+    --borer-round: 8px;
 }
 /* Universal */
 * {
@@ -12,19 +13,24 @@
 
 body{
     background-color: rgb(55, 53, 71);
+    text-align: center;
 }
 
 
-/* title */
+/* Header */
 .main-title{
     color:var(--pink-color)
 }
-/* Header */
+
+header > p , .card > p, footer{
+   color: var(--light-color); 
+}
 header{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 60px;
 }
 /* Main Content */
 .flex-container{
@@ -32,6 +38,11 @@ header{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     margin: 20px;
+    gap: 10px;
+}
+
+.card > p{
+    margin: 20px 10px;
 }
 
 .card{
@@ -39,26 +50,38 @@ header{
     width: auto; */
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     border: 2px dashed rgb(255, 255, 255);
-    margin: 5px;
+    margin: 15px;
     
 }
 
 .flex-container .card-header{
-    border:1px solid rgb(255, 255, 255);
-    border-radius: 8px;
+    border:1px solid var(--light-color);
+    border-radius: var(--borer-round);
     transition: all 0.5s ease-in-out;
     color:var(--pink-color);
 }
 
+/* Card headers */
+.card-header{
+    position: relative;
+    margin-top: -20px;
+    background-color: rgb(55, 53, 71);
+    padding: 8px;
+
+}
+
 
 /* code in cards */
-
 .code{
     background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%, rgba(232, 102, 236, 0.6)100%);
     color: white;
     user-select: all;
     white-space: pre-wrap;
+    width: 200px;
+    border-radius: var(--borer-round);
+    padding: 15px;
+    text-align: left;
 }
+
