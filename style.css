@@ -1,0 +1,46 @@
+/* Variables */
+:root{
+    --light-color:white;
+    --pink-color: rgb(208, 56, 238);
+}
+/* Universal */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(33, 32, 43);
+    color:azure;
+}
+
+/* Header */
+header{
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: (2,1fr);
+}
+/* Main Content */
+.code-card{
+    display: flex;
+    flex-direction: column;
+    ;
+    padding: 20px
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px dashed rgb(255, 255, 255);
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+.code-card .card-header{
+    border:1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
