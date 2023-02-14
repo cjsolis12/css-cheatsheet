@@ -11,36 +11,54 @@
 }
 
 body{
-    background-color: rgb(33, 32, 43);
-    color:azure;
+    background-color: rgb(55, 53, 71);
 }
 
+
+/* title */
+.main-title{
+    color:var(--pink-color)
+}
 /* Header */
 header{
-    display: grid;
-    grid-template-columns: (3, 1fr);
-    grid-template-rows: (2,1fr);
-}
-/* Main Content */
-.code-card{
     display: flex;
     flex-direction: column;
-    ;
-    padding: 20px
+    justify-content: center;
+    align-items: center;
+}
+/* Main Content */
+.flex-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    margin: 20px;
 }
 
 .card{
+    /* display: inline;
+    width: auto; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
     border: 2px dashed rgb(255, 255, 255);
-    justify-content: space-between;
-    padding: 20px;
+    margin: 5px;
     
 }
 
-.code-card .card-header{
+.flex-container .card-header{
     border:1px solid rgb(255, 255, 255);
     border-radius: 8px;
     transition: all 0.5s ease-in-out;
+    color:var(--pink-color);
+}
+
+
+/* code in cards */
+
+.code{
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%, rgba(232, 102, 236, 0.6)100%);
+    color: white;
+    user-select: all;
+    white-space: pre-wrap;
 }
